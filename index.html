@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Sign-up form</title>
+</head>
+<body>
+    <div class="left">
+        <div class="logo-stripe">
+            <img class="logo-icon" src="img/odin-lined (1).png" alt="">
+            <h1 class="header">ODIN</h1>
+        </div>
+        <p class="credit">PHOTO BY SUSAN WILKINSON @ UNSPLASH</p>
+    </div>
+    <div class="right">
+        <div class="top-text">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up now to get started</p>
+            <br>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="input-box">
+            <p class="form-text">Let's do this!</p>
+            <form method='post' action="#" id="my_form">
+                <div class="label-input firstNameError">
+                    <label for="first_name">FIRST NAME*</label>
+                    <input type="text" name="first_name" id="first_name" pattern = "[A-Za-z]+" placeholder="John" required>
+                </div>
+                <div class="label-input lastNameError">
+                    <label for="last_name">LAST NAME*</label>
+                    <input type="text" name="last_name" id="last_name" pattern="^[A-Za-z'-]+$" placeholder="O'Connor" required>
+                </div>
+                <div class="label-input emailError">
+                    <label for="email">EMAIL*</label>
+                    <input type="email" name="email" id="email" placeholder="john@email.com" required>
+                </div>
+                <div class="label-input phoneNumberError">
+                    <label for="phone_number">PHONE NUMBER</label>
+                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]+" placeholder="447778889990" minlength="10" maxlength="12" required>
+                </div>
+                <div class="label-input passwordError">
+                    <label for="password">PASSWORD*</label>
+                    <input type="password" name="password" id="password" pattern="/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/" required>
+                </div>
+                <div class="label-input confirmPasswordError">
+                    <label for="confirm_password">CONFIRM PASSWORD*</label>
+                    <input type="password" name="confirm_password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                </div>
+            </form>
+        </div>
+        <div class="bottom-text">
+            <button type="submit" form="my_form" value="Submit">Create Account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>
